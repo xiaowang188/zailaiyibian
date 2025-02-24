@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    color: #ffffff;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.nav-link:hover {
+    opacity: 1;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.center-text {
+    display: flex;
+    gap: 20px;
+}
+
+.center-text span {
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    animation: glow 2s ease-in-out infinite alternate;
+    opacity: 0.9;
+}
+
+.center-text span:nth-child(odd) {
+    animation-delay: 0.5s;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+                     0 0 40px rgba(255, 255, 255, 0.3),
+                     0 0 60px rgba(255, 255, 255, 0.2);
+        transform: translateY(0);
+    }
+    to {
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.8),
+                     0 0 50px rgba(255, 255, 255, 0.5),
+                     0 0 70px rgba(255, 255, 255, 0.3);
+        transform: translateY(-10px);
+    }
+} 
